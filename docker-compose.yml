@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  frps:
+    image: snowdreamtech/frps
+    volumes:
+      - "$PWD/frps.ini:/etc/frp/frps.ini:ro"
+    environment:
+      - "TOKEN="
+      - "DASHBOARD_USER="
+      - "DASHBOARD_PWD="
+      - "SUBDOMAIN_BASE="
+    network_mode: "host"
